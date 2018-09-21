@@ -39,3 +39,15 @@ pipeline {
 		}
 	}
 ```
+### EmailableReport
+Hi All,
+<br/>
+Please find the execution detail and buildlog in attachment.
+<br/>
+Report url: /<br/>
+<br/>
+<pre>
+${FILE, path="build/testngOutput/emailable-report.html"}
+</pre>
+
+Attachments: Reports/*.html
