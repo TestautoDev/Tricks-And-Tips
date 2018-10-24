@@ -5,3 +5,4 @@
 * https://medium.com/@madhupathy/a-beginners-guide-to-java-part-3-of-3-f0c9ba3648b1
 * https://medium.com/@madhupathy/a-beginners-guide-to-java-part-4-of-4-74b976ad4297
 
+* https://www.baeldung.com/java-collections
