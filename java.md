@@ -6,3 +6,4 @@
 * https://medium.com/@madhupathy/a-beginners-guide-to-java-part-4-of-4-74b976ad4297
 
 * https://www.baeldung.com/java-collections
+* https://www.geeksforgeeks.org/ [Algo bible]
