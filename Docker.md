@@ -6,3 +6,9 @@ docker exec -it <mycontainer> bash
 ### Docker conatainer run with priviledge
 --privileged
   
+### Docker containers:
+docker ls
+docker ps
+
+### Docker images:
+docker images
