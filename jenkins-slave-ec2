@@ -1,0 +1,3 @@
+I got the same error while launching slave.
+It has to do with the SSH Slave Plugin. What worked for me was changing the Host key verification strategy in 
+LAUNCH METHOD from "Known Hosts file verification strategy" to "Manually trusted key verification strategy".
