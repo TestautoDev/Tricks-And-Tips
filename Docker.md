@@ -10,6 +10,10 @@ docker exec -it <mycontainer> bash
 ``
 docker run -it <image> bash  
 ``
+### Docker login to image with entry point
+``
+docker run -it --entrypoint bash a387bc68df49
+``
 ### Docker conatainer run with priviledge
 --privileged
   
