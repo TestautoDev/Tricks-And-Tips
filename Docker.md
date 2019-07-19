@@ -15,11 +15,13 @@ docker run -it <image> bash
 docker run -it --entrypoint bash <image>
 ``
 ### Docker conatainer run with priviledge
+``
 --privileged
+``
   
 ### Docker containers:
 ``
-docker ls
+docker container ls
 docker ps
 ``
 ### Docker images:
