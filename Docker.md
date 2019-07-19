@@ -12,7 +12,7 @@ docker run -it <image> bash
 ``
 ### Docker login to image with entry point
 ``
-docker run -it --entrypoint bash a387bc68df49
+docker run -it --entrypoint bash <image>
 ``
 ### Docker conatainer run with priviledge
 --privileged
