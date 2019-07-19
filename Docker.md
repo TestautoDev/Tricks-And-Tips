@@ -18,8 +18,12 @@ docker run -it --entrypoint bash <image>
 --privileged
   
 ### Docker containers:
+``
 docker ls
 docker ps
-
+``
 ### Docker images:
+``
 docker images
+``
+
