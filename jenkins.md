@@ -10,9 +10,43 @@ or
 ```  
 System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox allow-scripts; default-src 'self'; img-src *; style-src 'self' 'unsafe-inline'; script-src * 'unsafe-inline';")
 ```  
+### Running different dockerfile in jenkins pipeline in different dir
+```Jenkinsfile
+pipeline {
+   agent none
+   stages {
+       stage("Only Dockerfile in Project") {
+	     agent { dockerfile true }
+	      steps {
+		 sh 'npm start'
+	      }
+	}
+        stage("Docker file under build folder") {
+	     agent {
+		dockerfile {
+		    dir 'build'
+		  }
+	      }
+	      steps {
+		 sh 'npm start'
+	      }
+	}
+	stage("Docker file for test under Tests folder") {
+	     agent {
+		dockerfile {
+		    dir 'E2ETests'
+		  }
+	      }
+	      steps {
+		 sh 'npm test'
+	      }
+	}
+   }
+}   
+```
 
 ### Demo jenkisnfile for multibranch javascript
-```
+```Jenkinsfile
 def buildVersion = ''
 
 pipeline {
