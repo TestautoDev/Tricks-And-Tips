@@ -8,7 +8,9 @@
 
 
 ### Docker command
+```bash
 docker run --rm -v C:\ccviews\taurus:/bzt-configs -v C:\ccviews\taurus\artifact:/tmp/artifacts blazemeter/taurus taurus_execution.yml
+```
 
 ### Demo Script 1
 ```
