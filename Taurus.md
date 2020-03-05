@@ -72,3 +72,39 @@ reporting:
 - console        
 
 ```
+### Demo Script 3
+```yml
+execution:
+- scenario: test
+  concurrency: 2
+  hold-for: 10s
+  duration: 2
+scenarios:
+  test:
+    headers:
+      Content-type: application/json
+    requests:
+    - url: https://******/api/
+      method: GET
+      extract-jsonpath:   
+        masterEventIds: $.result.
+        eventIds: $.result.
+    - url: https://******/api/
+      method: GET
+      label: bpe
+      assert-jsonpath:
+        - "$[0].quantity"
+    
+reporting:
+#- module: blazemeter
+#  report-name: testbpe
+#  test: testbpe
+#  project: testbpe
+- module: passfail
+  criteria:
+  - avg-rt of bpe>100ms for 10s, stop as failed
+  - rc4?? of bpe>1, stop as failed
+  - rc5?? of bpe>1, stop as failed
+
+
+```
