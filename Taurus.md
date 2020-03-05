@@ -13,7 +13,7 @@ docker run --rm -v C:\ccviews\taurus:/bzt-configs -v C:\ccviews\taurus\artifact:
 ```
 
 ### Demo Script 1
-```
+```yml
 execution:
 - scenario: testlogin
   concurrency: 170
@@ -49,7 +49,7 @@ reporting:
 
 ```
 ### Demo Script 2
-```
+```yml
 execution:
 - scenario: testlogin
   concurrency: 300
