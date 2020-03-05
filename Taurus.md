@@ -10,7 +10,7 @@
 ### Docker command
 docker run --rm -v C:\ccviews\taurus:/bzt-configs -v C:\ccviews\taurus\artifact:/tmp/artifacts blazemeter/taurus taurus_execution.yml
 
-### Demo Script
+### Demo Script 1
 ```
 execution:
 - scenario: testlogin
@@ -44,5 +44,29 @@ reporting:
   percentiles: true
   failed-labels: false   
   test-duration: true
+
+```
+### Demo Script 2
+```
+execution:
+- scenario: testlogin
+  concurrency: 300
+  hold-for: 3000s
+  duration: 1000
+scenarios:
+  testlogin:
+    headers:
+      Content-type: application/json
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    requests:
+    - url: https://
+      method: POST
+      body:
+        'username': 
+        'password': 
+        
+reporting:
+- final-stats
+- console        
 
 ```
