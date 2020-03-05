@@ -5,3 +5,7 @@
  sudo yum install python default-jre-headless python-tk python-pip python-dev \ libxml2-dev libxslt-dev zlib1g-dev net-tools  
  sudo yum -y install gcc  
  sudo yum install bzt  
+
+
+### Docker command
+docker run --rm -v C:\ccviews\taurus:/bzt-configs -v C:\ccviews\taurus\artifact:/tmp/artifacts blazemeter/taurus taurus_execution.yml
